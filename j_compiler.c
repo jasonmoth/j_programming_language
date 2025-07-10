@@ -22,7 +22,6 @@ int main(int argc, char *argv[]) { // argc = number of args passed (want to) *ar
 	}
 
 	int ch;
-	char *stack[];
 
 	while((ch = fgetc(file)) != EOF) {
 		putchar(ch);
