@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include <string.h>
+
 
 // want the user to run a command like
 // `./j_compiler my_file.j`
