@@ -184,7 +184,7 @@ int main(int argc, char *argv[]) {
 
 	char file_char_read;
 	while((file_char_read = fgetc(file)) != EOF) { 
-		printf("%c", ch);
+		printf("%c", file_char_read);
 
 		if (file_char_read == ' ') {
 			continue;
