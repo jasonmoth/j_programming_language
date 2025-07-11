@@ -140,6 +140,17 @@ void perform_stack_unit_tests() {
     printf("All tests complete.\n");
 }
 
+char *convert_char_to_string(char ch) {
+    char *str = malloc(2);
+    if (!str) {
+        fprintf(stderr, "malloc failed\n");
+        exit(1);
+    }
+    str[0] = ch;
+    str[1] = '\0';
+    return str;
+}
+
 
 int main(int argc, char *argv[]) {
 
@@ -160,9 +171,9 @@ int main(int argc, char *argv[]) {
 
 	char ch;
 
-	while((ch = fgetc(file)) != EOF && ch != " ") {
+	while((ch = fgetc(file)) != EOF && ch != " ") { // TODO revisit this when you realize you are tokenizing a string that may contain actual spaces
 		printf("%c", ch);
-		push_to_stack(s, &ch);
+		push_to_stack(s, convert_char_to_string(ch));
 	}
 
 	print_and_pop_entire_stack(s);
