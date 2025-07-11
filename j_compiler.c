@@ -48,6 +48,7 @@ char *pop_from_stack(Stack *s) {
 	char *old_top_node_value_address = old_top_node_address->value;
 	s->topNodeAddress = old_top_node_address->belowNodeAddress;
 	free(old_top_node_address);
+	printf("Pop!\n");
 	return old_top_node_value_address;
 }
 
