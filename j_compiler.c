@@ -19,6 +19,10 @@ Stack *initialize_stack() {
 	return s;
 }
 
+bool is_stack_empty(Stack *s) {
+	return s->topNodeAddress == NULL;
+}
+
 void push_to_stack(Stack *s, const char *str) {
 
 	Node *new_node = malloc(sizeof(Node));
@@ -53,10 +57,6 @@ char *pop_from_stack(Stack *s) {
 	return old_top_node_value_address;
 }
 
-bool is_stack_empty(Stack *s) {
-	return s->topNodeAddress == NULL;
-}
-
 void empty_entire_stack(Stack *s) {
     char *stackValue;
     while ((stackValue = pop_from_stack(s)) != NULL) {
@@ -66,7 +66,7 @@ void empty_entire_stack(Stack *s) {
 
 void print_and_pop_entire_stack(Stack *s) {
 	char *stack_value;
-	do {
+	while(!is_stack_empty(s)) {
 		stack_value = pop_from_stack(s);
 
 		if (stack_value)
@@ -75,7 +75,7 @@ void print_and_pop_entire_stack(Stack *s) {
 		    printf("Stack is empty!\n");
 
 		free(stack_value);
-	} while (stack_value != NULL);
+	}
 }
 
 void perform_stack_unit_tests() {
