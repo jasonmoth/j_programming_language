@@ -160,7 +160,7 @@ int main(int argc, char *argv[]) {
 
 	char ch;
 
-	while((ch = fgetc(file)) != EOF) {
+	while((ch = fgetc(file)) != EOF && ch != " ") {
 		printf("%c", ch);
 		push_to_stack(s, &ch);
 	}
