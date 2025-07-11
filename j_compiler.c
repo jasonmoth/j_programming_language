@@ -55,14 +55,14 @@ bool is_stack_empty(Stack *s) {
 	return s->topNodeAddress == NULL;
 }
 
-void empty_stack(Stack *s) {
+void empty_entire_stack(Stack *s) {
     char *stackValue;
     while ((stackValue = pop_from_stack(s)) != NULL) {
         free(stackValue);
     }
 }
 
-void print_stack(Stack *s) {
+void print_and_pop_entire_stack(Stack *s) {
 	char *stack_value;
 	do {
 		stack_value = pop_from_stack(s);
@@ -160,8 +160,10 @@ int main(int argc, char *argv[]) {
 	char ch;
 
 	while((ch = fgetc(file)) != EOF) {
-		push_to_stack
+		push_to_stack(ch);
 	}
+
+	print_and_pop_entire_stack(s);
 
 	fclose(file);
 
