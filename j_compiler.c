@@ -161,7 +161,7 @@ int main(int argc, char *argv[]) {
 
 	while((ch = fgetc(file)) != EOF) {
 		printf('%c', ch);
-		push_to_stack(s, ch);
+		push_to_stack(s, &ch);
 	}
 
 	print_and_pop_entire_stack(s);
