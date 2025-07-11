@@ -171,8 +171,10 @@ int main(int argc, char *argv[]) {
 
 	char ch;
 
-	while((ch = fgetc(file)) != EOF) { // TODO revisit this when you realize you are tokenizing a string that may contain actual spaces
+	while((ch = fgetc(file)) != EOF && ch != ' ') { // TODO revisit this when you realize you are tokenizing a string that may contain actual spaces
 		printf("%c", ch);
+
+		if 
 		push_to_stack(s, convert_char_to_string(ch));
 	}
 
