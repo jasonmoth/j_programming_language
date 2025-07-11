@@ -157,6 +157,8 @@ int main(int argc, char *argv[]) {
 
 	Stack *s = initialize_stack();
 
+	char ch;
+
 	while((ch = fgetc(file)) != EOF) {
 		push_to_stack
 	}
