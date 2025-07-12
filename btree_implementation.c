@@ -26,6 +26,5 @@ Btree* initialize_btree(int rootNodeKey) {
 int main() {
 
 	Btree* b = initialize_btree(5);
-
 	return 0;
 }
