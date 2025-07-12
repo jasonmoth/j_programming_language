@@ -14,7 +14,6 @@ typedef struct Btree {
 Btree* initialize_btree(int rootNodeKey) {
 
 	Node* n;
-	n->childNodes = NULL;
 	n->keys = {rootNodeKey};
 
 	Btree* b;
