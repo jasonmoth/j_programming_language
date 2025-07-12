@@ -14,7 +14,7 @@ typedef struct Btree {
 Btree* initialize_btree(int rootNodeKey) {
 
 	Node* n;
-	n->keys[0] = rootNodeKey;
+	// n->keys[0] = rootNodeKey;
 
 	Btree* b;
 	b->rootNodeAddress = n;
@@ -24,6 +24,6 @@ Btree* initialize_btree(int rootNodeKey) {
 
 int main() {
 
-	// Btree* b = initialize_btree(5);
+	Btree* b = initialize_btree(5);
 	return 0;
 }
