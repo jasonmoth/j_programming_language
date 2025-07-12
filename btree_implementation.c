@@ -50,12 +50,12 @@ int main() {
 	r.key = 5;
 	strcpy(r.value, "Five");
 
-	printf("r.key = %d", r.key);
-	printf("r.key = %s", r.value);
+	printf("r.key = %d\n", r.key);
+	printf("r.key = %s\n", r.value);
 
 	// printf("b->rootNodeAddress = %p\n", b->rootNodeAddress);
 	// printf("(b->rootNodeAddress)->keys[0] = %d\n", (b->rootNodeAddress)->keys[0]);
 
-	printf("Program ran sucessfully, exiting...\n");
+	printf("\n\nProgram ran sucessfully, exiting...\n\n\n");
 	return 0;
 }
