@@ -48,7 +48,7 @@ int main() {
 	Record r;
 
 	r.key = 5;
-	strcpy(r.value, 'Five');
+	strcpy(r.value, "Five");
 
 	printf("r.key = %d", r.key);
 	printf("r.key = %s", r.value);
