@@ -44,6 +44,8 @@ void insert_record_into_btree(Record r)
 
 int main() {
 
+	printf("\n\nProgam Starting...\n\n");
+
 	Btree* b = initialize_btree();
 	Record r;
 
