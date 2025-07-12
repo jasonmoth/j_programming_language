@@ -42,6 +42,6 @@ int main() {
 	// printf("b->rootNodeAddress = %p\n", b->rootNodeAddress);
 	// printf("(b->rootNodeAddress)->keys[0] = %d\n", (b->rootNodeAddress)->keys[0]);
 
-	printf("Program ran sucessfully, exiting...")
+	printf("Program ran sucessfully, exiting...");
 	return 0;
 }
