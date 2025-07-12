@@ -13,8 +13,8 @@ typedef struct Btree {
 
 Btree* initialize_btree(int rootNodeKey) {
 
-	Node* n;
-	// n->keys[0] = rootNodeKey;
+	Node* n = malloc(sizeof(Node));
+	n->keys[0] = rootNodeKey;
 
 	Btree* b;
 	b->rootNodeAddress = n;
