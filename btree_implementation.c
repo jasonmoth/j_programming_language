@@ -21,7 +21,12 @@ Btree* initialize_btree(int rootNodeKey) {
 	}
 	n->keys[0] = rootNodeKey;
 
-	Btree* b;
+	Btree* b = malloc(sizeof(Btree));
+	if (n == NULL) {
+		fprintf(stderr, "Error: Failed to malloc Btree on btree initialization.\n");
+		exit(1);
+	}
+
 	b->rootNodeAddress = n;
 
 	return b;
