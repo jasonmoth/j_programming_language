@@ -13,11 +13,11 @@ typedef struct Btree {
 
 Btree* initialize_btree(int rootNodeKey) {
 
-	*Node n;
+	Node* n;
 	n->childNodes = NULL;
 	n->keys = {rootNodeKey};
 
-	*Btree b;
+	Btree* b;
 	b->rootNodeAddress = n;
 
 	return b;
