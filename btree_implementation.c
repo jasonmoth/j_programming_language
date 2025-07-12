@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define MAX_NUMBER_OF_KEYS 1
 
@@ -47,7 +48,7 @@ int main() {
 	Record r;
 
 	r.key = 5;
-	r.value = 'Five';
+	strcpy(r.value, 'Five');
 
 	printf("r.key = %d", r.key);
 	printf("r.key = %s", *r.value);
