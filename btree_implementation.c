@@ -35,6 +35,6 @@ Btree* initialize_btree(int rootNodeKey) {
 int main() {
 
 	Btree* b = initialize_btree(5);
-	printf("b->rootNodeAddress = %p\n(b->rootNodeAddress)->keys[0] = %d", b->rootNodeAddress, (b->rootNodeAddress)->keys[0]);
+	printf("b->rootNodeAddress = %p\n(b->rootNodeAddress)->keys[0] = %d\n", b->rootNodeAddress, (b->rootNodeAddress)->keys[0]);
 	return 0;
 }
