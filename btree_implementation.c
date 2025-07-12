@@ -5,7 +5,7 @@
 
 typedef struct Record {
 	int key;
-	char* value;
+	char value[100];
 } Record;
 
 typedef struct Node {
@@ -36,12 +36,25 @@ Btree* initialize_btree() {
 	return b;
 }
 
+void insert_record_into_btree(Record r)
+{
+	print("Hello");
+}
+
 int main() {
 
 	Btree* b = initialize_btree();
+	Record r;
+
+	r.key = 5;
+	r.value = 'Five';
+
+	printf("r.key = %d", r.key);
+	printf("r.key = %s", *r.value);
+
 	// printf("b->rootNodeAddress = %p\n", b->rootNodeAddress);
 	// printf("(b->rootNodeAddress)->keys[0] = %d\n", (b->rootNodeAddress)->keys[0]);
 
-	printf("Program ran sucessfully, exiting...");
+	printf("Program ran sucessfully, exiting...\n");
 	return 0;
 }
