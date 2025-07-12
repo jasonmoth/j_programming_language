@@ -15,6 +15,10 @@ typedef struct Btree {
 Btree* initialize_btree(int rootNodeKey) {
 
 	Node* n = malloc(sizeof(Node));
+	if (n == NULL) {
+		fprintf(stderr, "Error: Failed to malloc Node on btree initialization.\n");
+		exit(1);
+	}
 	n->keys[0] = rootNodeKey;
 
 	Btree* b;
