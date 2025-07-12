@@ -38,7 +38,7 @@ Btree* initialize_btree() {
 
 void insert_record_into_btree(Record r)
 {
-	print("Hello");
+	printf("Hello");
 }
 
 int main() {
